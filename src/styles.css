@@ -235,21 +235,21 @@ a {
   padding-left: 4px;
 }
 
-.controls--floating .replay {
+.site-shell .controls--floating .replay {
   min-height: 26px;
   margin-left: 4px;
   padding-inline: 8px;
   border-radius: 7px;
   color: var(--base);
   background: var(--paper);
-  font-size: 0.56rem;
+  font: 400 0.56rem/1 Inter, ui-sans-serif, sans-serif;
 }
 
-.controls--floating .replay:hover {
+.site-shell .controls--floating .replay:hover {
   color: var(--base);
 }
 
-.controls--floating .replay span {
+.site-shell .controls--floating .replay span {
   color: var(--orange);
 }
 
@@ -298,24 +298,23 @@ a {
   padding-left: 14px;
 }
 
-.replay {
+.site-shell .replay {
   flex: 0 0 auto;
   margin-left: auto;
   min-height: 18px;
   padding-inline: 2px;
   color: var(--orange);
   background: transparent;
-  font-size: 0.5rem;
-  line-height: 1;
+  font: 400 0.58rem/1 Inter, ui-sans-serif, sans-serif;
   text-transform: lowercase;
 }
 
-.replay span {
+.site-shell .replay span {
   margin-left: 2px;
   color: currentColor;
 }
 
-.replay:focus-visible {
+.site-shell .replay:focus-visible {
   outline-width: 1px;
   outline-offset: 2px;
 }
@@ -422,7 +421,7 @@ a {
   font-size: 0.58rem;
 }
 
-.copy-for-llm {
+.site-shell .copy-for-llm {
   justify-self: start;
   min-height: 0;
   padding: 8px 10px;
@@ -431,12 +430,11 @@ a {
   color: #b7ff3c;
   background: rgba(255, 255, 255, 0.025);
   cursor: pointer;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.58rem;
+  font: 400 0.58rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: lowercase;
 }
 
-.copy-for-llm:hover {
+.site-shell .copy-for-llm:hover {
   background: rgba(183, 255, 60, 0.08);
 }
 
