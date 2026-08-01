@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">Cheez animated React pen marks</title>
+  <desc id="description">A dark Cheez banner demonstrating an underline, circle, highlight, and cross-out in vibrant ink colors.</desc>
+  <defs>
+    <pattern id="grid" width="20" height="30" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V30" fill="none" stroke="#f4f0e6" stroke-opacity="0.06" />
+    </pattern>
+    <mask id="highlight-reveal">
+      <rect width="1200" height="520" fill="#000" />
+      <path class="animated highlight-reveal" d="M746 332C805 322 883 326 978 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" pathLength="100">
+        <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.34;.49;.9;1" dur="6s" repeatCount="indefinite" />
+      </path>
+      <path class="reduced" d="M746 332C805 322 883 326 978 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" />
+    </mask>
+    <style>
+      .label { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; text-transform: uppercase; }
+      .sample { font: 500 31px Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: -.04em; }
+      .animated { stroke-dasharray: 100; stroke-linecap: round; stroke-linejoin: round; }
+      .reduced { display: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .animated { display: none; }
+        .reduced { display: block; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="18" fill="#0d0d0c" />
+  <path d="M560 42V478" stroke="#f4f0e6" stroke-opacity="0.12" />
+
+  <g transform="translate(70 58) scale(1.7)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 11.5C17.5 8.5 10 8.8 7.5 14.5C5 20.2 8.5 25.2 14.5 25C18 24.9 20.2 22.9 21.3 20.8M25.5 5.5C24.4 11.2 24.2 18.8 24.7 25.8M24.5 17.8C27.1 11.8 33.6 9.6 36 13.2C38.6 17.1 34.5 22.4 38.2 24.8M41.2 17.2C45.5 17.1 51.2 15.3 51.1 12.1C51 9.3 46.1 9.3 43 11.5C39.2 14.2 39.6 21.2 43.8 23.9C47.3 26.2 51.9 24 54 21M56.2 17.2C60.5 17.1 66.2 15.3 66.1 12.1C66 9.3 61.1 9.3 58 11.5C54.2 14.2 54.6 21.2 58.8 23.9C62.3 26.2 66.9 24 69 21M72 11.8C77 10.2 84 10 88.2 11.3C84.8 15.1 79.7 20.7 75.4 25C80.5 22.9 86.3 23 91 24.7" stroke="#f4f0e6" stroke-width="3.15" />
+    <path d="M98.2 24.3C99.3 23.2 101.1 23.3 101.8 24.5C101.5 26 99.8 26.6 98.5 25.7" stroke="#ff4f2e" stroke-width="3.6" />
+  </g>
+
+  <text x="72" y="207" fill="#f4f0e6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="55" font-weight="520" letter-spacing="-3">make words feel</text>
+  <rect x="68" y="230" width="235" height="70" fill="#ff4f2e" />
+  <text x="78" y="283" fill="#0d0d0c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="520" letter-spacing="-4">human.</text>
+  <text x="72" y="361" fill="#f4f0e6" fill-opacity="0.5" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18">60 hand-drawn marks for react</text>
+  <text x="72" y="397" fill="#f4f0e6" fill-opacity="0.28" class="label">svg · native waapi · react only</text>
+
+  <rect x="600" y="40" width="530" height="440" fill="url(#grid)" />
+  <g>
+    <text x="635" y="93" fill="#f4f0e6" fill-opacity="0.32" class="label">emphasis</text>
+    <text x="746" y="94" fill="#f4f0e6" class="sample">important</text>
+    <path class="animated" d="M742 110C798 105 882 113 986 107" fill="none" stroke="#ff4f2e" stroke-width="5" pathLength="100">
+      <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.04;.17;.9;1" dur="6s" repeatCount="indefinite" />
+    </path>
+    <path class="reduced" d="M742 110C798 105 882 113 986 107" fill="none" stroke="#ff4f2e" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <g>
+    <text x="635" y="201" fill="#f4f0e6" fill-opacity="0.32" class="label">encircle</text>
+    <text x="758" y="204" fill="#f4f0e6" class="sample">approved</text>
+    <path class="animated" d="M744 185C755 158 980 154 1002 187C1018 216 951 226 855 223C772 220 726 207 744 185Z" fill="none" stroke="#8f74ff" stroke-width="5" pathLength="100">
+      <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.18;.34;.9;1" dur="6s" repeatCount="indefinite" />
+    </path>
+    <path class="reduced" d="M744 185C755 158 980 154 1002 187C1018 216 951 226 855 223C772 220 726 207 744 185Z" fill="none" stroke="#8f74ff" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <g>
+    <text x="635" y="322" fill="#f4f0e6" fill-opacity="0.32" class="label">highlight</text>
+    <path d="M740 305C802 294 915 299 1000 310L994 345C913 354 814 348 738 341Z" fill="#b7ff3c" fill-opacity="0.72" mask="url(#highlight-reveal)" />
+    <text x="760" y="337" fill="#f4f0e6" class="sample">remember</text>
+  </g>
+
+  <g>
+    <text x="635" y="424" fill="#f4f0e6" fill-opacity="0.32" class="label">cross-out</text>
+    <text x="770" y="426" fill="#f4f0e6" class="sample">old copy</text>
+    <path class="animated" d="M752 409C812 416 905 409 995 414" fill="none" stroke="#ff5fa2" stroke-width="5" pathLength="100">
+      <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.5;.63;.9;1" dur="6s" repeatCount="indefinite" />
+    </path>
+    <path class="animated" d="M760 430C824 405 921 433 988 400" fill="none" stroke="#ff5fa2" stroke-width="3" pathLength="100">
+      <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.57;.7;.9;1" dur="6s" repeatCount="indefinite" />
+    </path>
+    <g class="reduced" fill="none" stroke="#ff5fa2" stroke-linecap="round">
+      <path d="M752 409C812 416 905 409 995 414" stroke-width="5" />
+      <path d="M760 430C824 405 921 433 988 400" stroke-width="3" />
+    </g>
+  </g>
+</svg>
