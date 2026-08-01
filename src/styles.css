@@ -386,10 +386,7 @@ a {
 }
 
 .install-intro {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  justify-content: space-between;
+  min-width: 0;
 }
 
 .install p {
@@ -426,21 +423,21 @@ a {
 }
 
 .copy-for-llm {
-  flex: 0 0 auto;
-  min-height: 26px;
-  padding-inline: 9px;
+  justify-self: start;
+  min-height: 0;
+  padding: 8px 10px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 0;
   color: #b7ff3c;
-  background: rgba(183, 255, 60, 0.08);
+  background: rgba(255, 255, 255, 0.025);
   cursor: pointer;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.54rem;
+  font-size: 0.58rem;
   text-transform: lowercase;
 }
 
 .copy-for-llm:hover {
-  background: rgba(183, 255, 60, 0.14);
+  background: rgba(183, 255, 60, 0.08);
 }
 
 .footer {

@@ -157,13 +157,8 @@ export function App() {
 
         <section id="install" className="install">
           <div className="install-intro">
-            <div>
-              <h2>install</h2>
-              <p>use the source registry or the package.</p>
-            </div>
-            <button className="copy-for-llm" type="button" onClick={copyForLlm}>
-              {llmContextCopied ? "copied" : "copy for llm"}
-            </button>
+            <h2>install</h2>
+            <p>use the source registry or the package.</p>
           </div>
           <div className="install-options">
             <div className="install-row">
@@ -173,6 +168,12 @@ export function App() {
             <div className="install-row">
               <span>npm</span>
               <code>npm install @berkantay/cheez</code>
+            </div>
+            <div className="install-row">
+              <span>llm</span>
+              <button className="copy-for-llm" type="button" onClick={copyForLlm}>
+                {llmContextCopied ? "copied" : "copy for llm"}
+              </button>
             </div>
           </div>
         </section>
