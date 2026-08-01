@@ -1,0 +1,189 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "cheez",
+  "homepage": "https://berkant.me/cheez",
+  "items": [
+    {
+      "name": "cheez-core",
+      "type": "registry:ui",
+      "title": "Cheez Core",
+      "description": "Dependency-free SVG renderer and native motion engine for Cheez pen marks.",
+      "files": [
+        {
+          "path": "registry/default/cheez-core/cheez-definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-definition.ts"
+        },
+        {
+          "path": "registry/default/cheez-core/cheez-motion.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-motion.ts"
+        },
+        {
+          "path": "registry/default/cheez-core/cheez-mark.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-mark.tsx"
+        },
+        {
+          "path": "registry/default/cheez-core/create-cheez-mark.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/create-cheez-mark.tsx"
+        }
+      ]
+    },
+    {
+      "name": "underline",
+      "type": "registry:ui",
+      "title": "Underline",
+      "description": "A responsive hand-drawn underline with calm, rushed, and chaotic characters.",
+      "registryDependencies": ["berkantay/cheez/cheez-core#v0.1.0"],
+      "files": [
+        {
+          "path": "registry/default/underline/underline.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/underline/underline.definition.ts"
+        },
+        {
+          "path": "registry/default/underline/underline.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/underline/underline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "circle",
+      "type": "registry:ui",
+      "title": "Circle",
+      "description": "A responsive hand-drawn circle with calm, rushed, and chaotic characters.",
+      "registryDependencies": ["berkantay/cheez/cheez-core#v0.1.0"],
+      "files": [
+        {
+          "path": "registry/default/circle/circle.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/circle/circle.definition.ts"
+        },
+        {
+          "path": "registry/default/circle/circle.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/circle/circle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "highlight",
+      "type": "registry:ui",
+      "title": "Highlight",
+      "description": "An irregular marker highlight revealed through an animated SVG mask.",
+      "registryDependencies": ["berkantay/cheez/cheez-core#v0.1.0"],
+      "files": [
+        {
+          "path": "registry/default/highlight/highlight.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/highlight/highlight.definition.ts"
+        },
+        {
+          "path": "registry/default/highlight/highlight.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/highlight/highlight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "overwrite",
+      "type": "registry:ui",
+      "title": "Overwrite",
+      "description": "Layered pen scribbles for crossing out and overwriting text.",
+      "registryDependencies": ["berkantay/cheez/cheez-core#v0.1.0"],
+      "files": [
+        {
+          "path": "registry/default/overwrite/overwrite.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/overwrite/overwrite.definition.ts"
+        },
+        {
+          "path": "registry/default/overwrite/overwrite.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/overwrite/overwrite.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cheez",
+      "type": "registry:ui",
+      "title": "Cheez — Full Collection",
+      "description": "The typed Cheez component with 60 pen-mark types and three drawing characters.",
+      "files": [
+        {
+          "path": "registry/default/cheez-core/cheez-definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-definition.ts"
+        },
+        {
+          "path": "registry/default/cheez-core/cheez-motion.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-motion.ts"
+        },
+        {
+          "path": "registry/default/cheez-core/cheez-mark.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/cheez-mark.tsx"
+        },
+        {
+          "path": "registry/default/cheez-core/create-cheez-mark.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-core/create-cheez-mark.tsx"
+        },
+        {
+          "path": "registry/default/underline/underline.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/underline/underline.definition.ts"
+        },
+        {
+          "path": "registry/default/underline/underline.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/underline/underline.tsx"
+        },
+        {
+          "path": "registry/default/circle/circle.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/circle/circle.definition.ts"
+        },
+        {
+          "path": "registry/default/circle/circle.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/circle/circle.tsx"
+        },
+        {
+          "path": "registry/default/highlight/highlight.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/highlight/highlight.definition.ts"
+        },
+        {
+          "path": "registry/default/highlight/highlight.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/highlight/highlight.tsx"
+        },
+        {
+          "path": "registry/default/overwrite/overwrite.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/overwrite/overwrite.definition.ts"
+        },
+        {
+          "path": "registry/default/overwrite/overwrite.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/overwrite/overwrite.tsx"
+        },
+        {
+          "path": "registry/default/mark-catalog.ts",
+          "type": "registry:component",
+          "target": "components/cheez/mark-catalog.ts"
+        },
+        {
+          "path": "registry/default/cheez.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez.tsx"
+        }
+      ]
+    }
+  ]
+}

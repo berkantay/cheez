@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "underline",
+  "title": "Underline",
+  "description": "A responsive hand-drawn underline with calm, rushed, and chaotic characters.",
+  "registryDependencies": [
+    "berkantay/cheez/cheez-core#v0.1.0"
+  ],
+  "files": [
+    {
+      "path": "registry/default/underline/underline.definition.ts",
+      "content": "import type { CheezDefinitionSet } from \"../cheez-core/cheez-definition\"\n\nconst placement = {\n  top: \"88%\",\n  left: \"-3%\",\n  width: \"106%\",\n  height: \"0.5em\",\n}\n\nexport const underlineDefinitions = {\n  calm: {\n    name: \"underline-calm\",\n    viewBox: \"0 0 100 18\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M2 9 C18 7 31 10 47 8 C63 6 80 10 98 7\",\n        strokeWidth: 2.2,\n        timing: { duration: 460 },\n      },\n    ],\n  },\n  rushed: {\n    name: \"underline-rushed\",\n    viewBox: \"0 0 100 18\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M1 11 C13 4 24 13 38 8 S63 12 76 7 S91 9 100 4\",\n        strokeWidth: 2.4,\n        timing: {\n          duration: 330,\n          easing: \"cubic-bezier(.15,.8,.25,1)\",\n        },\n      },\n    ],\n  },\n  chaotic: {\n    name: \"underline-chaotic\",\n    viewBox: \"0 0 100 18\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M0 8 C11 13 21 3 35 9 S59 4 72 10 S89 5 101 7\",\n        strokeWidth: 2.3,\n        timing: { duration: 280 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M4 13 C22 8 38 15 57 10 S82 14 97 9\",\n        strokeWidth: 1.5,\n        opacity: 0.76,\n        timing: { duration: 260, delay: 170 },\n      },\n    ],\n  },\n} satisfies CheezDefinitionSet\n",
+      "type": "registry:component",
+      "target": "components/cheez/underline/underline.definition.ts"
+    },
+    {
+      "path": "registry/default/underline/underline.tsx",
+      "content": "\"use client\"\n\nimport { createCheezMark } from \"../cheez-core/create-cheez-mark\"\nimport { underlineDefinitions } from \"./underline.definition\"\n\nexport const Underline = createCheezMark(\n  \"Underline\",\n  underlineDefinitions,\n  \"#ff5c35\",\n)\n",
+      "type": "registry:component",
+      "target": "components/cheez/underline/underline.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

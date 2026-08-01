@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "overwrite",
+  "title": "Overwrite",
+  "description": "Layered pen scribbles for crossing out and overwriting text.",
+  "registryDependencies": [
+    "berkantay/cheez/cheez-core#v0.1.0"
+  ],
+  "files": [
+    {
+      "path": "registry/default/overwrite/overwrite.definition.ts",
+      "content": "import type { CheezDefinitionSet } from \"../cheez-core/cheez-definition\"\n\nconst placement = {\n  top: \"10%\",\n  left: \"-3%\",\n  width: \"106%\",\n  height: \"82%\",\n}\n\nexport const overwriteDefinitions = {\n  calm: {\n    name: \"overwrite-calm\",\n    viewBox: \"0 0 100 30\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M1 8 C25 10 48 7 99 10\",\n        strokeWidth: 2.5,\n        timing: { duration: 360 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M2 16 C26 13 58 19 98 15\",\n        strokeWidth: 2.6,\n        timing: { duration: 350, delay: 150 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M3 23 C34 25 63 20 97 22\",\n        strokeWidth: 2.4,\n        timing: { duration: 340, delay: 290 },\n      },\n    ],\n  },\n  rushed: {\n    name: \"overwrite-rushed\",\n    viewBox: \"0 0 100 30\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M0 24 L98 5\",\n        strokeWidth: 2.8,\n        timing: { duration: 260 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M2 6 C30 10 66 18 100 24\",\n        strokeWidth: 2.7,\n        timing: { duration: 270, delay: 110 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M1 18 C26 13 63 13 99 11\",\n        strokeWidth: 2.3,\n        timing: { duration: 250, delay: 220 },\n      },\n    ],\n  },\n  chaotic: {\n    name: \"overwrite-chaotic\",\n    viewBox: \"0 0 100 30\",\n    placement,\n    layer: \"front\",\n    layers: [\n      {\n        type: \"stroke\",\n        path: \"M-2 24 C20 2 42 28 62 6 C75 -3 88 19 102 4\",\n        strokeWidth: 3,\n        timing: { duration: 300 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M0 4 C19 28 39 1 57 25 C72 38 88 9 101 24\",\n        strokeWidth: 2.7,\n        timing: { duration: 300, delay: 105 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M-1 14 C28 8 51 21 101 13\",\n        strokeWidth: 2.9,\n        timing: { duration: 270, delay: 220 },\n      },\n      {\n        type: \"stroke\",\n        path: \"M6 28 L94 1\",\n        strokeWidth: 1.8,\n        opacity: 0.76,\n        timing: { duration: 230, delay: 340 },\n      },\n    ],\n  },\n} satisfies CheezDefinitionSet\n",
+      "type": "registry:component",
+      "target": "components/cheez/overwrite/overwrite.definition.ts"
+    },
+    {
+      "path": "registry/default/overwrite/overwrite.tsx",
+      "content": "\"use client\"\n\nimport { createCheezMark } from \"../cheez-core/create-cheez-mark\"\nimport { overwriteDefinitions } from \"./overwrite.definition\"\n\nexport const Overwrite = createCheezMark(\n  \"Overwrite\",\n  overwriteDefinitions,\n  \"#151515\",\n)\n",
+      "type": "registry:component",
+      "target": "components/cheez/overwrite/overwrite.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

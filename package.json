@@ -1,0 +1,66 @@
+{
+  "name": "@berkantay/cheez",
+  "version": "0.1.0",
+  "description": "Human-feeling animated pen marks for React.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Berkant Ay",
+  "homepage": "https://berkant.me/cheez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkantay/cheez.git"
+  },
+  "bugs": {
+    "url": "https://github.com/berkantay/cheez/issues"
+  },
+  "keywords": [
+    "react",
+    "shadcn",
+    "animation",
+    "svg",
+    "underline",
+    "annotation"
+  ],
+  "files": [
+    "package-dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./package-dist/types/package/index.d.ts",
+      "import": "./package-dist/index.js",
+      "default": "./package-dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "bun run build:package && bun run build:demo",
+    "build:demo": "tsc -b && vite build",
+    "build:package": "vite build --config vite.package.config.ts && tsc -p tsconfig.package.json",
+    "build:registry": "bunx shadcn@latest build",
+    "validate:registry": "bunx shadcn@latest registry validate",
+    "check": "bun run typecheck && bun run test && bun run build && bun run validate:registry && bun run build:registry",
+    "prepublishOnly": "bun run typecheck && bun run test && bun run build:package",
+    "test": "vitest run",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
+  }
+}
