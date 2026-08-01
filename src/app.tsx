@@ -15,6 +15,20 @@ import {
 const CHARACTERS: CheezCharacter[] = ["calm", "rushed", "chaotic"]
 const FAMILIES = Object.keys(MARK_FAMILIES) as CheezFamily[]
 
+const LLM_CONTEXT = `Use Cheez for human-feeling animated pen marks in this React project.
+
+Install the source component:
+npx shadcn@latest add berkantay/cheez/cheez
+
+Then use:
+import { Cheez } from "@/components/cheez/cheez"
+
+<Cheez type="wavy-underline" character="rushed" color="#b7ff3c">
+  important detail
+</Cheez>
+
+Cheez has 60 mark types, calm/rushed/chaotic characters, and uses SVG with the native Web Animations API. Do not add Framer Motion.`
+
 const FAMILY_COLORS: Record<CheezFamily, string> = {
   emphasis: CHEEZ_COLORS.ink,
   encircle: CHEEZ_COLORS.purple,
@@ -68,6 +82,7 @@ export function App() {
   const [family, setFamily] = useState<CheezFamily | "all">("all")
   const [filtersFloating, setFiltersFloating] = useState(false)
   const [galleryKey, setGalleryKey] = useState(0)
+  const [llmContextCopied, setLlmContextCopied] = useState(false)
   const catalogRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -95,6 +110,15 @@ export function App() {
   const visibleTypes = MARK_TYPES.filter(
     (type) => family === "all" || getMarkFamily(type) === family,
   )
+
+  const copyForLlm = async () => {
+    try {
+      await navigator.clipboard.writeText(LLM_CONTEXT)
+      setLlmContextCopied(true)
+    } catch {
+      setLlmContextCopied(false)
+    }
+  }
 
   return (
     <main className="site-shell">
@@ -129,6 +153,28 @@ export function App() {
             i made cheez because digital words feel too perfect. marks should
             feel human.
           </p>
+        </section>
+
+        <section id="install" className="install">
+          <div className="install-intro">
+            <div>
+              <h2>install</h2>
+              <p>use the source registry or the package.</p>
+            </div>
+            <button className="copy-for-llm" type="button" onClick={copyForLlm}>
+              {llmContextCopied ? "copied" : "copy for llm"}
+            </button>
+          </div>
+          <div className="install-options">
+            <div className="install-row">
+              <span>shadcn</span>
+              <code>npx shadcn@latest add berkantay/cheez/cheez</code>
+            </div>
+            <div className="install-row">
+              <span>npm</span>
+              <code>npm install @berkantay/cheez</code>
+            </div>
+          </div>
         </section>
 
         <section id="catalog" className="catalog" ref={catalogRef}>
@@ -200,14 +246,6 @@ export function App() {
               ))}
             </div>
           </div>
-        </section>
-
-        <section id="install" className="install">
-          <div>
-            <h2>Install</h2>
-            <p>Add the full collection from the shadcn registry.</p>
-          </div>
-          <code>pnpm dlx shadcn@latest add @cheez/cheez</code>
         </section>
 
         <footer className="footer">

@@ -1,5 +1,5 @@
 export const CHEEZ_COLORS = {
-  base: "#0d0d0c",
+  base: "#000000",
   cyan: "#35d9ff",
   ink: "#ff4f2e",
   lime: "#b7ff3c",
