@@ -7,10 +7,10 @@
     </pattern>
     <mask id="highlight-reveal">
       <rect width="1200" height="520" fill="#000" />
-      <path class="animated highlight-reveal" d="M746 332C805 322 883 326 978 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" pathLength="100">
+      <path class="animated highlight-reveal" d="M748 332C796 322 856 326 930 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" pathLength="100">
         <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.34;.49;.9;1" dur="6s" repeatCount="indefinite" />
       </path>
-      <path class="reduced" d="M746 332C805 322 883 326 978 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" />
+      <path class="reduced" d="M748 332C796 322 856 326 930 333" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" />
     </mask>
     <style>
       .label { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; text-transform: uppercase; }
@@ -42,39 +42,39 @@
   <g>
     <text x="635" y="93" fill="#f4f0e6" fill-opacity="0.32" class="label">emphasis</text>
     <text x="746" y="94" fill="#f4f0e6" class="sample">important</text>
-    <path class="animated" d="M742 110C798 105 882 113 986 107" fill="none" stroke="#ff4f2e" stroke-width="5" pathLength="100">
+    <path class="animated" d="M738 110C778 105 830 113 886 107" fill="none" stroke="#ff4f2e" stroke-width="5" pathLength="100">
       <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.04;.17;.9;1" dur="6s" repeatCount="indefinite" />
     </path>
-    <path class="reduced" d="M742 110C798 105 882 113 986 107" fill="none" stroke="#ff4f2e" stroke-width="5" stroke-linecap="round" />
+    <path class="reduced" d="M738 110C778 105 830 113 886 107" fill="none" stroke="#ff4f2e" stroke-width="5" stroke-linecap="round" />
   </g>
 
   <g>
     <text x="635" y="201" fill="#f4f0e6" fill-opacity="0.32" class="label">encircle</text>
     <text x="758" y="204" fill="#f4f0e6" class="sample">approved</text>
-    <path class="animated" d="M744 185C755 158 980 154 1002 187C1018 216 951 226 855 223C772 220 726 207 744 185Z" fill="none" stroke="#8f74ff" stroke-width="5" pathLength="100">
+    <path class="animated" d="M744 184C754 160 932 157 946 187C958 213 910 224 838 221C777 220 730 205 744 184Z" fill="none" stroke="#8f74ff" stroke-width="5" pathLength="100">
       <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.18;.34;.9;1" dur="6s" repeatCount="indefinite" />
     </path>
-    <path class="reduced" d="M744 185C755 158 980 154 1002 187C1018 216 951 226 855 223C772 220 726 207 744 185Z" fill="none" stroke="#8f74ff" stroke-width="5" stroke-linecap="round" />
+    <path class="reduced" d="M744 184C754 160 932 157 946 187C958 213 910 224 838 221C777 220 730 205 744 184Z" fill="none" stroke="#8f74ff" stroke-width="5" stroke-linecap="round" />
   </g>
 
   <g>
     <text x="635" y="322" fill="#f4f0e6" fill-opacity="0.32" class="label">highlight</text>
-    <path d="M740 305C802 294 915 299 1000 310L994 345C913 354 814 348 738 341Z" fill="#b7ff3c" fill-opacity="0.72" mask="url(#highlight-reveal)" />
+    <path d="M742 305C790 295 870 299 948 310L944 345C874 352 806 348 740 341Z" fill="#b7ff3c" fill-opacity="0.72" mask="url(#highlight-reveal)" />
     <text x="760" y="337" fill="#f4f0e6" class="sample">remember</text>
   </g>
 
   <g>
     <text x="635" y="424" fill="#f4f0e6" fill-opacity="0.32" class="label">cross-out</text>
     <text x="770" y="426" fill="#f4f0e6" class="sample">old copy</text>
-    <path class="animated" d="M752 409C812 416 905 409 995 414" fill="none" stroke="#ff5fa2" stroke-width="5" pathLength="100">
+    <path class="animated" d="M752 409C802 416 866 409 935 414" fill="none" stroke="#ff5fa2" stroke-width="5" pathLength="100">
       <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.5;.63;.9;1" dur="6s" repeatCount="indefinite" />
     </path>
-    <path class="animated" d="M760 430C824 405 921 433 988 400" fill="none" stroke="#ff5fa2" stroke-width="3" pathLength="100">
+    <path class="animated" d="M760 430C810 405 872 433 928 400" fill="none" stroke="#ff5fa2" stroke-width="3" pathLength="100">
       <animate attributeName="stroke-dashoffset" values="100;100;0;0;100" keyTimes="0;.57;.7;.9;1" dur="6s" repeatCount="indefinite" />
     </path>
     <g class="reduced" fill="none" stroke="#ff5fa2" stroke-linecap="round">
-      <path d="M752 409C812 416 905 409 995 414" stroke-width="5" />
-      <path d="M760 430C824 405 921 433 988 400" stroke-width="3" />
+      <path d="M752 409C802 416 866 409 935 414" stroke-width="5" />
+      <path d="M760 430C810 405 872 433 928 400" stroke-width="3" />
     </g>
   </g>
 </svg>

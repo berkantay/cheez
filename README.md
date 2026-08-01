@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://berkant.me/cheez">
-    <img src="./assets/cheez-hero.svg" alt="Cheez, human-feeling animated pen marks for React" width="100%" />
+    <img src="./assets/cheez-hero.svg" alt="Cheez, human-feeling animated pen marks for React" width="900" />
   </a>
 </p>
 
@@ -28,7 +28,7 @@ Web Animations API. React composes the mark; React does not run every frame.
 There is no Framer Motion dependency and no canvas.
 
 <p align="center">
-  <img src="./assets/cheez-characters.svg" alt="Calm, rushed, and chaotic Cheez drawing characters" width="100%" />
+  <img src="./assets/cheez-characters.svg" alt="Calm, rushed, and chaotic Cheez drawing characters" width="900" />
 </p>
 
 ## shadcn registry
