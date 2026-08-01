@@ -236,11 +236,13 @@ a {
 }
 
 .controls--floating .replay {
-  min-height: 28px;
+  min-height: 26px;
   margin-left: 4px;
+  padding-inline: 8px;
   border-radius: 7px;
   color: var(--base);
   background: var(--paper);
+  font-size: 0.56rem;
 }
 
 .controls--floating .replay:hover {
@@ -299,15 +301,23 @@ a {
 .replay {
   flex: 0 0 auto;
   margin-left: auto;
-  min-height: 24px;
-  padding-inline: 7px;
+  min-height: 18px;
+  padding-inline: 2px;
   color: var(--orange);
   background: transparent;
+  font-size: 0.5rem;
+  line-height: 1;
+  text-transform: lowercase;
 }
 
 .replay span {
-  margin-left: 4px;
+  margin-left: 2px;
   color: currentColor;
+}
+
+.replay:focus-visible {
+  outline-width: 1px;
+  outline-offset: 2px;
 }
 
 .grid-surface {
