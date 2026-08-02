@@ -1,0 +1,241 @@
+.cheez-menubar,
+.cheez-menubar__trigger,
+.cheez-menubar__item {
+  -webkit-tap-highlight-color: transparent;
+  font: inherit;
+}
+
+.cheez-menubar {
+  --cheez-menubar-foreground: #f4f0e6;
+  --cheez-menubar-muted: rgba(244, 240, 230, 0.54);
+  --cheez-menubar-line: rgba(244, 240, 230, 0.14);
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 7px;
+  overflow-x: auto;
+  color: var(--cheez-menubar-foreground);
+  background: #000;
+  scrollbar-width: none;
+}
+
+.cheez-menubar::-webkit-scrollbar {
+  display: none;
+}
+
+.cheez-menubar__trigger {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border: 0;
+  color: var(--cheez-menubar-muted);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 560;
+  outline: 0;
+  white-space: nowrap;
+}
+
+.cheez-menubar[data-size="small"] .cheez-menubar__trigger {
+  min-height: 29px;
+  padding-inline: 8px;
+  font-size: 0.62rem;
+}
+
+.cheez-menubar[data-size="large"] .cheez-menubar__trigger {
+  min-height: 40px;
+  padding-inline: 13px;
+  font-size: 0.8rem;
+}
+
+.cheez-menubar__trigger:hover,
+.cheez-menubar__trigger:focus-visible,
+.cheez-menubar__trigger[data-popup-open] {
+  color: var(--cheez-menubar-foreground);
+}
+
+.cheez-menubar__trigger:focus-visible,
+.cheez-menubar__item:focus-visible {
+  outline: 1px solid var(--cheez-menubar-interaction);
+  outline-offset: 2px;
+}
+
+.cheez-menubar__trigger:disabled,
+.cheez-menubar__item[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.34;
+}
+
+.cheez-menubar__positioner {
+  z-index: 70;
+  outline: 0;
+}
+
+.cheez-menubar__popup {
+  --cheez-menubar-foreground: #f4f0e6;
+  --cheez-menubar-muted: rgba(244, 240, 230, 0.54);
+  --cheez-menubar-line: rgba(244, 240, 230, 0.14);
+  min-width: max(var(--anchor-width), 210px);
+  padding: 7px;
+  border: 1px solid var(--cheez-menubar-line);
+  color: var(--cheez-menubar-foreground);
+  background: #000;
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.7);
+  outline: 0;
+  transform-origin: var(--transform-origin);
+  transition:
+    opacity 130ms ease-out,
+    transform 170ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cheez-menubar__popup[data-starting-style],
+.cheez-menubar__popup[data-ending-style] {
+  opacity: 0;
+  transform: translateY(-3px) scale(0.985);
+}
+
+.cheez-menubar__popup[data-side="top"][data-starting-style],
+.cheez-menubar__popup[data-side="top"][data-ending-style] {
+  transform: translateY(3px) scale(0.985);
+}
+
+.cheez-menubar__popup[data-side="right"][data-starting-style],
+.cheez-menubar__popup[data-side="right"][data-ending-style] {
+  transform: translateX(-3px) scale(0.985);
+}
+
+.cheez-menubar__popup[data-side="left"][data-starting-style],
+.cheez-menubar__popup[data-side="left"][data-ending-style] {
+  transform: translateX(3px) scale(0.985);
+}
+
+.cheez-menubar__popup[data-size="small"] {
+  min-width: 188px;
+}
+
+.cheez-menubar__popup[data-size="large"] {
+  min-width: 232px;
+}
+
+.cheez-menubar__item {
+  display: flex;
+  min-height: 35px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 9px;
+  color: var(--cheez-menubar-muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+  outline: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.cheez-menubar__popup[data-size="small"] .cheez-menubar__item {
+  min-height: 31px;
+  font-size: 0.65rem;
+}
+
+.cheez-menubar__popup[data-size="large"] .cheez-menubar__item {
+  min-height: 40px;
+  font-size: 0.8rem;
+}
+
+.cheez-menubar__item[data-highlighted],
+.cheez-menubar__item[data-popup-open] {
+  color: var(--cheez-menubar-foreground);
+}
+
+.cheez-menubar__item[data-tone="danger"] {
+  color: #ff5f74;
+}
+
+.cheez-menubar__check {
+  display: inline-grid;
+  width: 17px;
+  min-width: 17px;
+  color: var(--cheez-menubar-color);
+  font-family: ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  place-items: center;
+  transform: rotate(-7deg);
+}
+
+.cheez-menubar__submenu-arrow {
+  display: inline-grid;
+  width: 13px;
+  height: 14px;
+  margin-left: auto;
+  color: var(--cheez-menubar-interaction);
+  opacity: 0.66;
+  place-items: center;
+  transform: rotate(0deg) translateX(0);
+  transition:
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 120ms ease-out;
+}
+
+.cheez-menubar__submenu-arrow svg {
+  display: block;
+  width: 10px;
+  height: 12px;
+  overflow: visible;
+}
+
+.cheez-menubar__submenu-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+  vector-effect: non-scaling-stroke;
+}
+
+.cheez-menubar__item[data-highlighted] .cheez-menubar__submenu-arrow {
+  opacity: 1;
+  transform: translateX(1.5px);
+}
+
+.cheez-menubar__item[data-popup-open] .cheez-menubar__submenu-arrow {
+  color: var(--cheez-menubar-color);
+  opacity: 1;
+  transform: rotate(7deg) translateX(2px);
+}
+
+.cheez-menubar__shortcut {
+  margin-left: auto;
+  color: rgba(244, 240, 230, 0.34);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+
+.cheez-menubar__label {
+  padding: 8px 9px 5px;
+  color: rgba(244, 240, 230, 0.34);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.cheez-menubar__separator {
+  height: 1px;
+  margin: 5px;
+  background: var(--cheez-menubar-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cheez-menubar__popup,
+  .cheez-menubar__submenu-arrow {
+    transition-duration: 0.01ms;
+  }
+}

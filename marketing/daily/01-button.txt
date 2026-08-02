@@ -1,0 +1,10 @@
+day 1 of cheez.
+
+marked button.
+
+outline, solid, quiet. each boundary is drawn by hand.
+
+react + svg + native motion. no framer.
+
+https://berkant.me/cheez/components/button
+https://github.com/berkantay/cheez

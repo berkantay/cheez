@@ -1,0 +1,11 @@
+digital words feel too perfect.
+
+so i made cheez.
+
+60 hand-drawn marks for react.
+3 drawing characters.
+svg + native waapi. no framer motion.
+
+npx shadcn@latest add berkantay/cheez/cheez
+
+https://berkant.me/cheez

@@ -154,6 +154,88 @@ a {
   line-height: 1.65;
 }
 
+.component-system {
+  margin-bottom: 46px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+.section-heading span {
+  color: var(--orange);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  font-weight: 560;
+  letter-spacing: -0.025em;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.component-demo {
+  min-width: 0;
+  min-height: 190px;
+  padding: 14px;
+  background: var(--base);
+}
+
+.component-demo--buttons {
+  grid-column: 1 / -1;
+  min-height: 128px;
+}
+
+.component-demo > header {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(244, 240, 230, 0.32);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.component-demo > header code {
+  font: inherit;
+}
+
+.component-demo__stage {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.component-demo--buttons .component-demo__stage {
+  min-height: 78px;
+}
+
+.component-demo__stage .cheez-tabs {
+  width: min(100%, 270px);
+}
+
 .catalog {
   padding-bottom: 72px;
 }
@@ -516,6 +598,18 @@ a {
     max-width: none;
     margin: 0;
     padding: 0 24px 32px;
+  }
+
+  .section-heading {
+    align-items: start;
+  }
+
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .component-demo--buttons {
+    grid-column: auto;
   }
 
   .mark-grid {

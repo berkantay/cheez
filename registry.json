@@ -184,6 +184,508 @@
           "target": "components/cheez/cheez.tsx"
         }
       ]
+    },
+    {
+      "name": "cheez-ui-core",
+      "type": "registry:lib",
+      "title": "Cheez UI Core",
+      "description": "Shared visual tokens and animated label primitive for Cheez UI components.",
+      "registryDependencies": ["berkantay/cheez/cheez"],
+      "files": [
+        {
+          "path": "registry/default/cheez-ui/marked-label.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-ui/marked-label.tsx"
+        },
+        {
+          "path": "registry/default/cheez-ui/marked-field.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-ui/marked-field.ts"
+        },
+        {
+          "path": "registry/default/cheez-ui/marked-feedback.ts",
+          "type": "registry:component",
+          "target": "components/cheez/cheez-ui/marked-feedback.ts"
+        },
+        {
+          "path": "registry/default/cheez-ui/cheez-ui.css",
+          "type": "registry:file",
+          "target": "components/cheez/cheez-ui/cheez-ui.css"
+        }
+      ]
+    },
+    {
+      "name": "marked-button",
+      "type": "registry:ui",
+      "title": "Marked Button",
+      "description": "A minimal button that draws a Cheez mark on hover and keyboard focus.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-button/button-frame.definition.ts",
+          "type": "registry:component",
+          "target": "components/cheez/marked-button/button-frame.definition.ts"
+        },
+        {
+          "path": "registry/default/marked-button/marked-button.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-button/marked-button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-tabs",
+      "type": "registry:ui",
+      "title": "Marked Tabs",
+      "description": "Accessible tabs whose active label is identified by a hand-drawn mark.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-tabs/marked-tabs.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-tabs/marked-tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-dropdown",
+      "type": "registry:ui",
+      "title": "Marked Dropdown",
+      "description": "An accessible action menu with Cheez-marked trigger, highlight, checkbox, radio, disabled, and danger states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-dropdown/marked-dropdown.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-dropdown/marked-dropdown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-input",
+      "type": "registry:ui",
+      "title": "Marked Input",
+      "description": "A native input with Cheez marks for hover, focus, filled, invalid, disabled, and read-only states.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-input/marked-input.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-input/marked-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-textarea",
+      "type": "registry:ui",
+      "title": "Marked Textarea",
+      "description": "A native textarea with Cheez focus, validation, auto-grow, character count, disabled, and read-only states.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-textarea/marked-textarea.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-textarea/marked-textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-checkbox",
+      "type": "registry:ui",
+      "title": "Marked Checkbox",
+      "description": "An accessible checkbox with Cheez-marked checked, indeterminate, focus, validation, and disabled states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-checkbox/marked-checkbox.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-checkbox/marked-checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-radio",
+      "type": "registry:ui",
+      "title": "Marked Radio",
+      "description": "An accessible radio group with Cheez-marked selection, focus, validation, item, and group states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-radio/marked-radio.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-radio/marked-radio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-switch",
+      "type": "registry:ui",
+      "title": "Marked Switch",
+      "description": "An accessible switch with a moving thumb and Cheez-marked on, focus, validation, and disabled states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-switch/marked-switch.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-switch/marked-switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-select",
+      "type": "registry:ui",
+      "title": "Marked Select",
+      "description": "An accessible select with a Cheez-marked trigger, popup, highlighted option, selected item, groups, and validation states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-select/marked-select.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-select/marked-select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-slider",
+      "type": "registry:ui",
+      "title": "Marked Slider",
+      "description": "An accessible single or range slider with Cheez-drawn horizontal, vertical, thumb, validation, and disabled states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-slider/marked-slider.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-slider/marked-slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-dialog",
+      "type": "registry:ui",
+      "title": "Marked Dialog",
+      "description": "An accessible modal or non-modal dialog with a Cheez-drawn frame, marked title, close glyph, controlled state, and focus management.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-dialog/marked-dialog.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-dialog/marked-dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-tooltip",
+      "type": "registry:ui",
+      "title": "Marked Tooltip",
+      "description": "An accessible tooltip with Cheez-drawn frames, directional pen arrows, grouped delays, cursor tracking, and keyboard focus behavior.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-tooltip/marked-tooltip.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-tooltip/marked-tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-popover",
+      "type": "registry:ui",
+      "title": "Marked Popover",
+      "description": "An accessible interactive popover with a pinned Cheez frame, directional arrow, focus management, hover opening, and modal states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-popover/marked-popover.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-popover/marked-popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-accordion",
+      "type": "registry:ui",
+      "title": "Marked Accordion",
+      "description": "An accessible accordion with Cheez-drawn active boundaries, marked triggers, animated panels, single and multiple expansion, and disabled states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-accordion/marked-accordion.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-accordion/marked-accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-toast",
+      "type": "registry:ui",
+      "title": "Marked Toast",
+      "description": "An accessible toast stack with Cheez-drawn status glyphs and frames, promise states, actions, priorities, queue limits, and swipe dismissal.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-toast/marked-toast.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-toast/marked-toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-alert",
+      "type": "registry:ui",
+      "title": "Marked Alert",
+      "description": "A native live-region alert with Cheez-drawn status glyphs, outline and marker-filled variants, actions, banner layout, and controlled dismissal.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-alert/marked-alert.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-alert/marked-alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-progress",
+      "type": "registry:ui",
+      "title": "Marked Progress",
+      "description": "An accessible progress indicator with Cheez-drawn line, marker, and boxed variants, buffer values, segments, completion glyphs, and indeterminate motion.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-progress/marked-progress.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-progress/marked-progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-badge",
+      "type": "registry:ui",
+      "title": "Marked Badge",
+      "description": "A semantic inline badge with Cheez-drawn outline, marker-filled, and quiet variants, status glyphs, counts, and controlled removable tags.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-badge/marked-badge.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-badge/marked-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-avatar",
+      "type": "registry:ui",
+      "title": "Marked Avatar",
+      "description": "An accessible Base UI avatar with Cheez-drawn frames, marker-washed fallbacks, presence glyphs, image loading states, and grouped overflow counts.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-avatar/marked-avatar.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-avatar/marked-avatar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-skeleton",
+      "type": "registry:ui",
+      "title": "Marked Skeleton",
+      "description": "A hand-drawn loading skeleton with solid Cheez ink redraws, shape presets, staggered text rhythms, motion controls, and accessible busy groups.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-skeleton/marked-skeleton.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-skeleton/marked-skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-separator",
+      "type": "registry:ui",
+      "title": "Marked Separator",
+      "description": "A semantic Base UI separator with Cheez-drawn horizontal and vertical strokes, visible labels, directional routes, spacing, and decorative modes.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-separator/marked-separator.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-separator/marked-separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-card",
+      "type": "registry:ui",
+      "title": "Marked Card",
+      "description": "A compositional semantic card with Cheez-drawn outlines, solid marker fills, quiet and pinned variants, selection states, media layouts, and native content slots.",
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-card/marked-card.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-card/marked-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-table",
+      "type": "registry:ui",
+      "title": "Marked Table",
+      "description": "A native compositional table with Cheez-drawn frames, density presets, sortable headers, row selection treatments, responsive overflow, and semantic table slots.",
+      "registryDependencies": [
+        "berkantay/cheez/cheez-ui-core"
+      ],
+      "files": [
+        {
+          "path": "registry/default/marked-table/marked-table.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-table/marked-table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-pagination",
+      "type": "registry:ui",
+      "title": "Marked Pagination",
+      "description": "Accessible pagination with Cheez-drawn current pages, directional arrows, compact and spread layouts, deterministic ranges, and native link or button controls.",
+      "registryDependencies": [
+        "berkantay/cheez/cheez-ui-core"
+      ],
+      "files": [
+        {
+          "path": "registry/default/marked-pagination/marked-pagination.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-pagination/marked-pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-breadcrumb",
+      "type": "registry:ui",
+      "title": "Marked Breadcrumb",
+      "description": "A semantic breadcrumb with Cheez-drawn separators, current-page marks, explicit overflow disclosure, wrapping, and native navigation elements.",
+      "registryDependencies": [
+        "berkantay/cheez/cheez-ui-core"
+      ],
+      "files": [
+        {
+          "path": "registry/default/marked-breadcrumb/marked-breadcrumb.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-breadcrumb/marked-breadcrumb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marked-navigation-menu",
+      "type": "registry:ui",
+      "title": "Marked Navigation Menu",
+      "description": "An accessible navigation menu with Cheez-marked triggers, links, a measured framed viewport, responsive compact mode, and flexible content layouts.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-navigation-menu/marked-navigation-menu.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-navigation-menu/marked-navigation-menu.tsx"
+        },
+        {
+          "path": "registry/default/marked-navigation-menu/marked-navigation-menu.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-navigation-menu/marked-navigation-menu.css"
+        }
+      ]
+    },
+    {
+      "name": "marked-menubar",
+      "type": "registry:ui",
+      "title": "Marked Menubar",
+      "description": "An accessible application menubar with Cheez-marked triggers, items, nested menus, checkbox and radio choices, shortcuts, and destructive states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-menubar/marked-menubar.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-menubar/marked-menubar.tsx"
+        },
+        {
+          "path": "registry/default/marked-menubar/marked-menubar.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-menubar/marked-menubar.css"
+        }
+      ]
+    },
+    {
+      "name": "marked-combobox",
+      "type": "registry:ui",
+      "title": "Marked Combobox",
+      "description": "An accessible searchable combobox with Cheez-drawn controls, selection marks, groups, clear and status states, and removable multi-select chips.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-combobox/marked-combobox.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-combobox/marked-combobox.tsx"
+        },
+        {
+          "path": "registry/default/marked-combobox/marked-combobox.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-combobox/marked-combobox.css"
+        }
+      ]
+    },
+    {
+      "name": "cheez-ui",
+      "type": "registry:base",
+      "title": "Cheez UI",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, and combobox components.",
+      "registryDependencies": [
+        "berkantay/cheez/marked-button",
+        "berkantay/cheez/marked-tabs",
+        "berkantay/cheez/marked-dropdown",
+        "berkantay/cheez/marked-input",
+        "berkantay/cheez/marked-textarea",
+        "berkantay/cheez/marked-checkbox",
+        "berkantay/cheez/marked-radio",
+        "berkantay/cheez/marked-switch",
+        "berkantay/cheez/marked-select",
+        "berkantay/cheez/marked-slider",
+        "berkantay/cheez/marked-dialog",
+        "berkantay/cheez/marked-tooltip",
+        "berkantay/cheez/marked-popover",
+        "berkantay/cheez/marked-accordion",
+        "berkantay/cheez/marked-toast",
+        "berkantay/cheez/marked-alert",
+        "berkantay/cheez/marked-progress",
+        "berkantay/cheez/marked-badge",
+        "berkantay/cheez/marked-avatar",
+        "berkantay/cheez/marked-skeleton",
+        "berkantay/cheez/marked-separator",
+        "berkantay/cheez/marked-card",
+        "berkantay/cheez/marked-table",
+        "berkantay/cheez/marked-pagination",
+        "berkantay/cheez/marked-breadcrumb",
+        "berkantay/cheez/marked-navigation-menu",
+        "berkantay/cheez/marked-menubar",
+        "berkantay/cheez/marked-combobox"
+      ],
+      "files": []
     }
   ]
 }

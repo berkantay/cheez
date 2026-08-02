@@ -12,8 +12,6 @@
 <p align="center">
   <a href="https://berkant.me/cheez">demo</a>
   ·
-  <a href="https://www.npmjs.com/package/@berkantay/cheez">npm</a>
-  ·
   <a href="#shadcn-registry">shadcn registry</a>
   ·
   <a href="./LICENSE">mit</a>
@@ -61,26 +59,6 @@ export function Important() {
 The full item is self-contained. Focused registry items are also available:
 `underline`, `circle`, `highlight`, `overwrite`, and `cheez-core`.
 
-## package
-
-```bash
-bun add @berkantay/cheez
-npm install @berkantay/cheez
-pnpm add @berkantay/cheez
-```
-
-```tsx
-import { Cheez } from "@berkantay/cheez"
-
-export function Approved() {
-  return (
-    <Cheez type="loose-circle" character="calm" color="#8f74ff">
-      approved
-    </Cheez>
-  )
-}
-```
-
 ## the small api
 
 ```tsx
@@ -109,7 +87,7 @@ Use a ref with `trigger="manual"` when replay belongs to your interface:
 
 ```tsx
 import { useRef } from "react"
-import type { CheezMarkHandle } from "@berkantay/cheez"
+import type { CheezMarkHandle } from "@/components/cheez/cheez-core/cheez-mark"
 
 const mark = useRef<CheezMarkHandle>(null)
 

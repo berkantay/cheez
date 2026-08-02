@@ -4,6 +4,20 @@ import { CHEEZ_COLORS } from "./brand"
 import { CheezWordmark } from "./cheez-wordmark"
 import type { CheezCharacter } from "@/registry/default/cheez-core/cheez-definition"
 import { Cheez } from "@/registry/default/cheez"
+import { MarkedButton } from "@/registry/default/marked-button/marked-button"
+import {
+  MarkedDropdown,
+  MarkedDropdownContent,
+  MarkedDropdownItem,
+  MarkedDropdownSeparator,
+  MarkedDropdownTrigger,
+} from "@/registry/default/marked-dropdown/marked-dropdown"
+import {
+  MarkedTabs,
+  MarkedTabsList,
+  MarkedTabsPanel,
+  MarkedTabsTrigger,
+} from "@/registry/default/marked-tabs/marked-tabs"
 import {
   MARK_FAMILIES,
   MARK_TYPES,
@@ -129,6 +143,7 @@ export function App() {
 
         <nav aria-label="Primary navigation">
           <a className="active" href="#top">Overview</a>
+          <a href="#components">Components</a>
           <a href="#catalog">Marks</a>
           <a href="#install">Install</a>
 
@@ -155,10 +170,98 @@ export function App() {
           </p>
         </section>
 
+        <section id="components" className="component-system">
+          <div className="section-heading">
+            <div>
+              <span>cheez ui</span>
+              <h2>marks with a job.</h2>
+            </div>
+            <p>familiar controls. human feedback.</p>
+          </div>
+
+          <div className="component-grid">
+            <article className="component-demo component-demo--buttons">
+              <header>
+                <span>01</span>
+                <code>marked-button</code>
+              </header>
+              <div className="component-demo__stage">
+                <MarkedButton markColor={CHEEZ_COLORS.ink}>
+                  save changes
+                </MarkedButton>
+                <MarkedButton
+                  mark="loose-circle"
+                  markColor={CHEEZ_COLORS.purple}
+                  variant="quiet"
+                >
+                  preview
+                </MarkedButton>
+              </div>
+            </article>
+
+            <article className="component-demo">
+              <header>
+                <span>02</span>
+                <code>marked-tabs</code>
+              </header>
+              <div className="component-demo__stage">
+                <MarkedTabs defaultValue="notes">
+                  <MarkedTabsList>
+                    <MarkedTabsTrigger value="notes" markColor={CHEEZ_COLORS.lime}>
+                      notes
+                    </MarkedTabsTrigger>
+                    <MarkedTabsTrigger value="marks" markColor={CHEEZ_COLORS.pink}>
+                      marks
+                    </MarkedTabsTrigger>
+                    <MarkedTabsTrigger value="motion" markColor={CHEEZ_COLORS.cyan}>
+                      motion
+                    </MarkedTabsTrigger>
+                  </MarkedTabsList>
+                  <MarkedTabsPanel value="notes">
+                    small details should still feel made by someone.
+                  </MarkedTabsPanel>
+                  <MarkedTabsPanel value="marks">
+                    sixty marks, each with three drawing characters.
+                  </MarkedTabsPanel>
+                  <MarkedTabsPanel value="motion">
+                    svg paths animated with the native web animations api.
+                  </MarkedTabsPanel>
+                </MarkedTabs>
+              </div>
+            </article>
+
+            <article className="component-demo">
+              <header>
+                <span>03</span>
+                <code>marked-dropdown</code>
+              </header>
+              <div className="component-demo__stage">
+                <MarkedDropdown>
+                  <MarkedDropdownTrigger markColor={CHEEZ_COLORS.purple}>
+                    choose a character
+                  </MarkedDropdownTrigger>
+                  <MarkedDropdownContent>
+                    <MarkedDropdownItem markColor={CHEEZ_COLORS.ink}>
+                      calm
+                    </MarkedDropdownItem>
+                    <MarkedDropdownItem markColor={CHEEZ_COLORS.lime}>
+                      rushed
+                    </MarkedDropdownItem>
+                    <MarkedDropdownSeparator />
+                    <MarkedDropdownItem markColor={CHEEZ_COLORS.pink}>
+                      chaotic
+                    </MarkedDropdownItem>
+                  </MarkedDropdownContent>
+                </MarkedDropdown>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section id="install" className="install">
           <div className="install-intro">
             <h2>install</h2>
-            <p>use the source registry or the package.</p>
+            <p>install the source with your package runner.</p>
           </div>
           <div className="install-options">
             <div className="install-row">
@@ -166,8 +269,8 @@ export function App() {
               <code>npx shadcn@latest add berkantay/cheez/cheez</code>
             </div>
             <div className="install-row">
-              <span>npm</span>
-              <code>npm install @berkantay/cheez</code>
+              <span>bun</span>
+              <code>bunx shadcn@latest add berkantay/cheez/cheez</code>
             </div>
             <div className="install-row">
               <span>llm</span>

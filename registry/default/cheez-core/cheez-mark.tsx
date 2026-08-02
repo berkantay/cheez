@@ -40,6 +40,7 @@ export interface CheezMarkProps
   definition: CheezDefinition
   color?: string
   durationScale?: number
+  fillColor?: string
   once?: boolean
   thickness?: number
   trigger?: CheezTrigger
@@ -76,10 +77,12 @@ function getAnimatedPathProps({
 }
 
 function FillLayer({
+  color,
   layer,
   maskId,
   initiallyVisible,
 }: {
+  color?: string
   layer: CheezFillLayer
   maskId: string
   initiallyVisible: boolean
@@ -114,7 +117,7 @@ function FillLayer({
       </defs>
       <path
         d={layer.path}
-        fill="currentColor"
+        fill={color ?? "currentColor"}
         mask={`url(#${maskId})`}
         opacity={layer.opacity ?? 1}
         transform={layer.transform}
@@ -131,6 +134,7 @@ export const CheezMark = forwardRef<CheezMarkHandle, CheezMarkProps>(
       color = "currentColor",
       definition,
       durationScale = 1,
+      fillColor,
       once = true,
       onAnimationComplete,
       onFocus,
@@ -252,6 +256,7 @@ export const CheezMark = forwardRef<CheezMarkHandle, CheezMarkProps>(
               return (
                 <FillLayer
                   key={`${definition.name}-${index}`}
+                  color={fillColor}
                   layer={layer}
                   maskId={`cheez-${reactId}-${index}`}
                   initiallyVisible={initiallyVisible}

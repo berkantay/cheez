@@ -1,0 +1,8 @@
+day 25 of cheez.
+
+marked breadcrumb. the route remembers the hand.
+
+react + svg + native motion. no framer.
+
+https://berkant.me/cheez/components/breadcrumb
+https://github.com/berkantay/cheez

@@ -9,5 +9,5 @@
     "rootDir": ".",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.package.tsbuildinfo"
   },
-  "include": ["package", "registry/default"]
+  "include": ["package", "registry/default", "src/vite-env.d.ts"]
 }
