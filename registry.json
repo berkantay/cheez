@@ -651,10 +651,33 @@
       ]
     },
     {
+      "name": "marked-command",
+      "type": "registry:ui",
+      "title": "Marked Command",
+      "description": "A searchable command palette composed from the Cheez combobox and dialog, with grouped results, shortcuts, empty states, and hand-drawn selection feedback.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": [
+        "berkantay/cheez/marked-combobox",
+        "berkantay/cheez/marked-dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/default/marked-command/marked-command.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-command/marked-command.tsx"
+        },
+        {
+          "path": "registry/default/marked-command/marked-command.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-command/marked-command.css"
+        }
+      ]
+    },
+    {
       "name": "cheez-ui",
       "type": "registry:base",
       "title": "Cheez UI",
-      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, and combobox components.",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, and command components.",
       "registryDependencies": [
         "berkantay/cheez/marked-button",
         "berkantay/cheez/marked-tabs",
@@ -683,7 +706,8 @@
         "berkantay/cheez/marked-breadcrumb",
         "berkantay/cheez/marked-navigation-menu",
         "berkantay/cheez/marked-menubar",
-        "berkantay/cheez/marked-combobox"
+        "berkantay/cheez/marked-combobox",
+        "berkantay/cheez/marked-command"
       ],
       "files": []
     }

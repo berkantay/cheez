@@ -1,0 +1,146 @@
+.cheez-command {
+  width: min(100%, 460px);
+}
+
+.cheez-command > .cheez-combobox__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cheez-command__input-group .cheez-combobox__input-body {
+  min-height: 50px;
+  gap: 8px;
+  padding-inline: 13px 9px;
+}
+
+.cheez-command__search {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  color: var(--cheez-combobox-color);
+  place-items: center;
+}
+
+.cheez-command__search svg {
+  width: 18px;
+  height: 18px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.cheez-command__input {
+  font-size: 0.76rem;
+}
+
+.cheez-command__content {
+  min-width: min(460px, var(--available-width));
+}
+
+.cheez-command__content .cheez-combobox__popup-body {
+  padding: 7px;
+}
+
+.cheez-command__list {
+  max-height: min(380px, var(--available-height));
+}
+
+.cheez-command__item {
+  min-height: 48px;
+}
+
+.cheez-command__item-layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.cheez-command__icon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  color: var(--cheez-combobox-color);
+  font: 0.7rem ui-monospace, monospace;
+  place-items: center;
+}
+
+.cheez-command__copy {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.cheez-command__copy > span,
+.cheez-command__copy > small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cheez-command__copy > small {
+  color: rgba(244, 240, 230, 0.38);
+  font-size: 0.48rem;
+}
+
+.cheez-command__shortcut {
+  padding: 3px 5px;
+  border: 1px solid rgba(244, 240, 230, 0.16);
+  color: rgba(244, 240, 230, 0.48);
+  background: transparent;
+  font: 0.48rem ui-monospace, monospace;
+}
+
+.cheez-command__item[data-highlighted] :is(.cheez-command__copy > small, .cheez-command__shortcut) {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.cheez-command__item[data-highlighted] .cheez-command__icon {
+  color: #000;
+}
+
+.cheez-command__separator {
+  position: relative;
+  height: 8px;
+  margin: 3px 8px;
+}
+
+.cheez-command__separator::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  background: var(--cheez-command-separator);
+  clip-path: polygon(0 38%, 26% 14%, 51% 62%, 76% 24%, 100% 52%, 100% 100%, 0 100%);
+  content: "";
+  opacity: 0.72;
+}
+
+.cheez-command-dialog {
+  width: min(560px, calc(100vw - 34px));
+}
+
+.cheez-command-dialog .cheez-dialog__body {
+  padding: 24px;
+}
+
+.cheez-command-dialog .cheez-command {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cheez-command__separator::after {
+    clip-path: none;
+  }
+}

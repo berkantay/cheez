@@ -129,6 +129,11 @@ import {
   MarkedComboboxInputGroup,
   MarkedComboboxTrigger,
 } from "@/registry/default/marked-combobox/marked-combobox"
+import {
+  MarkedCommand,
+  MarkedCommandInput,
+  MarkedCommandSeparator,
+} from "@/registry/default/marked-command/marked-command"
 import { MarkedTextarea } from "@/registry/default/marked-textarea/marked-textarea"
 import {
   MarkedDropdown,
@@ -1349,5 +1354,20 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('aria-invalid="true"')
     expect(markup).toContain('role="alert"')
     expect(markup).toContain('data-invalid=""')
+  })
+
+  it("keeps command search labelled and composes its drawn separator", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedCommand items={["open", "save"]} label="project commands">
+        <MarkedCommandInput placeholder="find a command" />
+        <MarkedCommandSeparator color="#b7ff3c" />
+      </MarkedCommand>,
+    )
+
+    expect(markup).toContain("project commands")
+    expect(markup).toContain('placeholder="find a command"')
+    expect(markup).toContain('aria-label="clear command search"')
+    expect(markup).toContain('role="separator"')
+    expect(markup).toContain("--cheez-command-separator:#b7ff3c")
   })
 })
