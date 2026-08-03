@@ -1,0 +1,42 @@
+.cheez-toolbar__frame { display: inline-block !important; }
+.cheez-toolbar {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 3px;
+  padding: 7px;
+  color: #f4f0e6;
+  background: #050505;
+  overflow-x: auto;
+}
+.cheez-toolbar[data-orientation="vertical"] { flex-direction: column; align-items: stretch; overflow: visible; }
+.cheez-toolbar[data-size="small"] { padding: 4px; }
+.cheez-toolbar[data-size="large"] { gap: 6px; padding: 10px; }
+.cheez-toolbar__group { display: flex; align-items: center; gap: 2px; }
+.cheez-toolbar[data-orientation="vertical"] .cheez-toolbar__group { flex-direction: column; align-items: stretch; }
+.cheez-toolbar__button {
+  min-width: 32px;
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 0;
+  color: rgba(244,240,230,.66);
+  background: transparent;
+  cursor: pointer;
+  font: .61rem Arial,Helvetica,sans-serif;
+  outline: 0;
+}
+.cheez-toolbar[data-size="small"] .cheez-toolbar__button { min-width: 27px; min-height: 26px; padding: 4px 6px; font-size: .55rem; }
+.cheez-toolbar[data-size="large"] .cheez-toolbar__button { min-width: 38px; min-height: 36px; padding: 7px 10px; font-size: .68rem; }
+.cheez-toolbar__button[aria-pressed="true"] { color: #f4f0e6; }
+.cheez-toolbar__button[data-tone="danger"] { color: #ff9bc4; }
+.cheez-toolbar__button[data-disabled] { opacity: .28; cursor: not-allowed; }
+.cheez-toolbar__control-copy { display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap; }
+.cheez-toolbar__icon { display: inline-grid; min-width: 13px; place-items: center; font: .8rem/1 ui-monospace,monospace; }
+.cheez-toolbar__link { display: inline-grid; place-items: center; text-decoration: none; }
+.cheez-toolbar__input-frame { display: inline-block !important; }
+.cheez-toolbar__input { width: 112px; min-height: 29px; padding: 5px 8px; border: 0; color: #f4f0e6; background: rgba(244,240,230,.055); font: .57rem Arial,Helvetica,sans-serif; outline: 0; }
+.cheez-toolbar__input::placeholder { color: rgba(244,240,230,.3); }
+.cheez-toolbar__separator { align-self: stretch; width: 7px; min-height: 26px; margin-inline: 2px; background: var(--cheez-toolbar-separator); clip-path: polygon(42% 0,61% 18%,37% 39%,65% 61%,40% 81%,57% 100%,36% 100%,48% 80%,25% 60%,50% 39%,31% 19%,43% 0); opacity: .62; }
+.cheez-toolbar__separator[data-orientation="horizontal"] { width: auto; height: 7px; min-height: 0; margin: 2px 0; clip-path: polygon(0 42%,18% 61%,39% 37%,61% 65%,81% 40%,100% 57%,100% 36%,80% 48%,60% 25%,39% 50%,19% 31%,0 43%); }
+@media(prefers-reduced-motion:reduce){.cheez-toolbar *{transition:none!important}}

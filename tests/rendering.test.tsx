@@ -136,6 +136,13 @@ import {
   MarkedHoverCardTrigger,
 } from "@/registry/default/marked-hover-card/marked-hover-card"
 import {
+  MarkedToolbar,
+  MarkedToolbarButton,
+  MarkedToolbarGroup,
+  MarkedToolbarLink,
+  MarkedToolbarSeparator,
+} from "@/registry/default/marked-toolbar/marked-toolbar"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -288,6 +295,25 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('href="/people/ada"')
     expect(markup).toContain("cheez-hover-card__trigger")
     expect(markup).toContain("ada")
+  })
+
+  it("renders toolbar controls with native semantics and pressed state", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedToolbar aria-label="formatting">
+        <MarkedToolbarGroup>
+          <MarkedToolbarButton pressed>bold</MarkedToolbarButton>
+          <MarkedToolbarButton disabled>crop</MarkedToolbarButton>
+        </MarkedToolbarGroup>
+        <MarkedToolbarSeparator />
+        <MarkedToolbarLink href="/help">help</MarkedToolbarLink>
+      </MarkedToolbar>,
+    )
+
+    expect(markup).toContain('role="toolbar"')
+    expect(markup).toContain('aria-label="formatting"')
+    expect(markup).toContain('aria-pressed="true"')
+    expect(markup).toContain('href="/help"')
+    expect(markup).toContain("cheez-toolbar__separator")
   })
 
   it("separates active, inactive, and disabled tab states", () => {
