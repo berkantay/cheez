@@ -31,5 +31,6 @@
   { "id": "context-menu", "number": 30, "title": "marked context menu", "tagline": "the right click leaves a human trace", "accent": "#ff5fa2", "kind": "overlay" },
   { "id": "hover-card", "number": 31, "title": "marked hover card", "tagline": "a preview should reward curiosity", "accent": "#35d9ff", "kind": "overlay" },
   { "id": "toolbar", "number": 32, "title": "marked toolbar", "tagline": "tools remember what the hand chose", "accent": "#b7ff3c", "kind": "action" },
-  { "id": "toggle-group", "number": 33, "title": "marked toggle group", "tagline": "choices stay visibly chosen", "accent": "#8f74ff", "kind": "selection" }
+  { "id": "toggle-group", "number": 33, "title": "marked toggle group", "tagline": "choices stay visibly chosen", "accent": "#8f74ff", "kind": "selection" },
+  { "id": "number-field", "number": 34, "title": "marked number field", "tagline": "numbers respond to pressure", "accent": "#ff4f2e", "kind": "field" }
 ]

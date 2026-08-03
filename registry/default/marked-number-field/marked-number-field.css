@@ -1,0 +1,17 @@
+.cheez-number-field{display:grid;width:max-content;max-width:100%;gap:7px;color:#f4f0e6}
+.cheez-number-field__label,.cheez-number-field__scrub{width:max-content;color:rgba(244,240,230,.62);font:.58rem Arial,Helvetica,sans-serif}
+.cheez-number-field__scrub{cursor:ew-resize;user-select:none;touch-action:none}
+.cheez-number-field__cursor{display:grid;width:34px;height:20px;place-items:center;color:#000;background:#b7ff3c;font:.7rem ui-monospace,monospace;clip-path:polygon(4% 12%,96% 0,100% 85%,7% 100%,0 54%)}
+.cheez-number-field__frame{display:block!important}
+.cheez-number-field__group{display:grid;grid-template-columns:auto minmax(52px,1fr) auto;align-items:center;min-width:150px;background:#050505}
+.cheez-number-field__input{width:100%;min-width:0;height:36px;padding:7px 9px;border:0;color:#f4f0e6;background:transparent;font:.7rem var(--font-geist-mono,ui-monospace),monospace;text-align:center;outline:0}
+.cheez-number-field__input::selection{color:#000;background:#b7ff3c}
+.cheez-number-field__step{display:grid;width:34px;height:34px;padding:0;border:0;color:rgba(244,240,230,.6);background:transparent;cursor:pointer;place-items:center;outline:0}
+.cheez-number-field__step[data-disabled]{opacity:.25;cursor:not-allowed}
+.cheez-number-field__step-copy{display:inline-grid;min-width:19px;min-height:19px;place-items:center;font:.9rem/1 ui-monospace,monospace}
+.cheez-number-field__step-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.cheez-number-field__message{color:rgba(244,240,230,.36);font:.5rem Arial,Helvetica,sans-serif;line-height:1.4}.cheez-number-field__error{color:#ff8fbd}
+.cheez-number-field[data-size="small"] .cheez-number-field__group{min-width:125px}.cheez-number-field[data-size="small"] .cheez-number-field__input{height:30px;font-size:.6rem}.cheez-number-field[data-size="small"] .cheez-number-field__step{width:29px;height:29px}
+.cheez-number-field[data-size="large"] .cheez-number-field__group{min-width:190px}.cheez-number-field[data-size="large"] .cheez-number-field__input{height:44px;font-size:.82rem}.cheez-number-field[data-size="large"] .cheez-number-field__step{width:42px;height:42px}
+.cheez-number-field[data-disabled]{opacity:.35}.cheez-number-field[data-readonly] .cheez-number-field__step{display:none}.cheez-number-field[data-readonly] .cheez-number-field__group{grid-template-columns:1fr}
+@media(prefers-reduced-motion:reduce){.cheez-number-field *{transition:none!important}}

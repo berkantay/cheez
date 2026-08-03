@@ -147,6 +147,15 @@ import {
   MarkedToggleGroupItem,
 } from "@/registry/default/marked-toggle-group/marked-toggle-group"
 import {
+  MarkedNumberField,
+  MarkedNumberFieldDecrement,
+  MarkedNumberFieldDescription,
+  MarkedNumberFieldGroup,
+  MarkedNumberFieldIncrement,
+  MarkedNumberFieldInput,
+  MarkedNumberFieldLabel,
+} from "@/registry/default/marked-number-field/marked-number-field"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -334,6 +343,26 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('aria-pressed="true"')
     expect(markup).toContain('data-pressed=""')
     expect(markup).toContain("disabled")
+  })
+
+  it("connects number-field labels, controls, and native number semantics", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedNumberField id="quantity" defaultValue={4} min={0} max={10}>
+        <MarkedNumberFieldLabel>quantity</MarkedNumberFieldLabel>
+        <MarkedNumberFieldGroup>
+          <MarkedNumberFieldDecrement />
+          <MarkedNumberFieldInput />
+          <MarkedNumberFieldIncrement />
+        </MarkedNumberFieldGroup>
+        <MarkedNumberFieldDescription>between zero and ten</MarkedNumberFieldDescription>
+      </MarkedNumberField>,
+    )
+
+    expect(markup).toContain('for="quantity"')
+    expect(markup).toContain('aria-roledescription="Number field"')
+    expect(markup).toContain('type="number" min="0" max="10"')
+    expect(markup).toContain('id="quantity-description"')
+    expect(markup).toContain("cheez-number-field__step")
   })
 
   it("separates active, inactive, and disabled tab states", () => {
