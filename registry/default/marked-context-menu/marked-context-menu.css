@@ -1,0 +1,139 @@
+.cheez-context-menu__trigger {
+  outline: 0;
+}
+
+.cheez-context-menu__positioner {
+  z-index: 140;
+  outline: 0;
+}
+
+.cheez-context-menu__frame {
+  display: block !important;
+}
+
+.cheez-context-menu__popup {
+  min-width: 230px;
+  max-width: min(320px, var(--available-width));
+  padding: 7px;
+  color: #f4f0e6;
+  background: #050505;
+  outline: 0;
+  transform-origin: var(--transform-origin);
+  transition: opacity 110ms ease, scale 110ms ease;
+}
+
+.cheez-context-menu__popup[data-starting-style],
+.cheez-context-menu__popup[data-ending-style] {
+  opacity: 0;
+  scale: 0.97;
+}
+
+.cheez-context-menu__item {
+  min-height: 38px;
+  padding: 5px 8px;
+  color: rgba(244, 240, 230, 0.76);
+  cursor: default;
+  font: 0.64rem Arial, Helvetica, sans-serif;
+  outline: 0;
+  user-select: none;
+}
+
+.cheez-context-menu__item[data-disabled] {
+  opacity: 0.3;
+}
+
+.cheez-context-menu__item[data-tone="danger"] {
+  color: #ff9bc4;
+}
+
+.cheez-context-menu__item > .cheez-ui,
+.cheez-context-menu__item > .cheez-ui > span {
+  display: block;
+  width: 100%;
+}
+
+.cheez-context-menu__item-layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.cheez-context-menu__copy {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.cheez-context-menu__copy span,
+.cheez-context-menu__copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cheez-context-menu__copy small {
+  color: rgba(244, 240, 230, 0.38);
+  font-size: 0.48rem;
+}
+
+.cheez-context-menu__item kbd {
+  color: rgba(244, 240, 230, 0.38);
+  background: transparent;
+  font: 0.48rem ui-monospace, monospace;
+}
+
+.cheez-context-menu__indicator {
+  display: inline-grid !important;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: middle;
+  place-items: center;
+}
+
+.cheez-context-menu__indicator + .cheez-ui {
+  display: inline-block;
+  width: calc(100% - 25px);
+  vertical-align: middle;
+}
+
+.cheez-context-menu__group + .cheez-context-menu__group {
+  margin-top: 4px;
+}
+
+.cheez-context-menu__label {
+  padding: 7px 8px 4px;
+  color: rgba(244, 240, 230, 0.34);
+  font: 0.48rem ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cheez-context-menu__separator {
+  height: 7px;
+  margin: 2px 7px;
+  border: 0;
+  background: var(--cheez-context-menu-separator);
+  clip-path: polygon(0 44%, 23% 21%, 48% 62%, 74% 25%, 100% 52%, 100% 70%, 73% 48%, 49% 85%, 22% 43%, 0 64%);
+  opacity: 0.62;
+}
+
+.cheez-context-menu__arrow {
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  transition: translate 120ms ease;
+}
+
+.cheez-context-menu__sub-trigger[data-popup-open] .cheez-context-menu__arrow {
+  translate: 3px 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cheez-context-menu__popup,
+  .cheez-context-menu__arrow {
+    transition: none;
+  }
+}

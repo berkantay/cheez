@@ -124,6 +124,14 @@ import {
   MarkedMenubarTrigger,
 } from "@/registry/default/marked-menubar/marked-menubar"
 import {
+  MarkedContextMenu,
+  MarkedContextMenuGroup,
+  MarkedContextMenuItem,
+  MarkedContextMenuLabel,
+  MarkedContextMenuSeparator,
+  MarkedContextMenuTrigger,
+} from "@/registry/default/marked-context-menu/marked-context-menu"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -245,6 +253,25 @@ describe("Cheez rendering", () => {
     expect(tabsMarkup).toContain('role="tab"')
     expect(tabsMarkup).toContain('role="tabpanel"')
     expect(dropdownMarkup).toContain('aria-haspopup="menu"')
+  })
+
+  it("keeps the context-menu trigger native and its structure explicit", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedContextMenu>
+        <MarkedContextMenuTrigger>right click this area</MarkedContextMenuTrigger>
+        <MarkedContextMenuGroup>
+          <MarkedContextMenuLabel>actions</MarkedContextMenuLabel>
+          <MarkedContextMenuItem>duplicate</MarkedContextMenuItem>
+          <MarkedContextMenuSeparator color="#35d9ff" />
+        </MarkedContextMenuGroup>
+      </MarkedContextMenu>,
+    )
+
+    expect(markup).toContain("right click this area")
+    expect(markup).toContain("cheez-context-menu__trigger")
+    expect(markup).toContain("cheez-context-menu__group")
+    expect(markup).toContain("cheez-context-menu__label")
+    expect(markup).toContain("cheez-context-menu__separator")
   })
 
   it("separates active, inactive, and disabled tab states", () => {

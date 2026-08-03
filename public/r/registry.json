@@ -674,10 +674,30 @@
       ]
     },
     {
+      "name": "marked-context-menu",
+      "type": "registry:ui",
+      "title": "Marked Context Menu",
+      "description": "An accessible right-click menu with Cheez-drawn focus, checked and radio choices, nested actions, keyboard opening, and destructive states.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-context-menu/marked-context-menu.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-context-menu/marked-context-menu.tsx"
+        },
+        {
+          "path": "registry/default/marked-context-menu/marked-context-menu.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-context-menu/marked-context-menu.css"
+        }
+      ]
+    },
+    {
       "name": "cheez-ui",
       "type": "registry:base",
       "title": "Cheez UI",
-      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, and command components.",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, and context menu components.",
       "registryDependencies": [
         "berkantay/cheez/marked-button",
         "berkantay/cheez/marked-tabs",
@@ -707,7 +727,8 @@
         "berkantay/cheez/marked-navigation-menu",
         "berkantay/cheez/marked-menubar",
         "berkantay/cheez/marked-combobox",
-        "berkantay/cheez/marked-command"
+        "berkantay/cheez/marked-command",
+        "berkantay/cheez/marked-context-menu"
       ],
       "files": []
     }
