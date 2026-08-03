@@ -734,10 +734,30 @@
       ]
     },
     {
+      "name": "marked-toggle-group",
+      "type": "registry:ui",
+      "title": "Marked Toggle Group",
+      "description": "An accessible Base UI toggle group with single or multiple selection, optional required state, controlled values, roving keyboard focus, vertical orientation, and persistent Cheez marks.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-toggle-group/marked-toggle-group.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-toggle-group/marked-toggle-group.tsx"
+        },
+        {
+          "path": "registry/default/marked-toggle-group/marked-toggle-group.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-toggle-group/marked-toggle-group.css"
+        }
+      ]
+    },
+    {
       "name": "cheez-ui",
       "type": "registry:base",
       "title": "Cheez UI",
-      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, and toolbar components.",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, toolbar, and toggle group components.",
       "registryDependencies": [
         "berkantay/cheez/marked-button",
         "berkantay/cheez/marked-tabs",
@@ -770,7 +790,8 @@
         "berkantay/cheez/marked-command",
         "berkantay/cheez/marked-context-menu",
         "berkantay/cheez/marked-hover-card",
-        "berkantay/cheez/marked-toolbar"
+        "berkantay/cheez/marked-toolbar",
+        "berkantay/cheez/marked-toggle-group"
       ],
       "files": []
     }

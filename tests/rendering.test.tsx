@@ -143,6 +143,10 @@ import {
   MarkedToolbarSeparator,
 } from "@/registry/default/marked-toolbar/marked-toolbar"
 import {
+  MarkedToggleGroup,
+  MarkedToggleGroupItem,
+} from "@/registry/default/marked-toggle-group/marked-toggle-group"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -314,6 +318,22 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('aria-pressed="true"')
     expect(markup).toContain('href="/help"')
     expect(markup).toContain("cheez-toolbar__separator")
+  })
+
+  it("renders toggle groups with controlled pressed semantics", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedToggleGroup aria-label="alignment" value={["left"]} required>
+        <MarkedToggleGroupItem value="left">left</MarkedToggleGroupItem>
+        <MarkedToggleGroupItem value="center">center</MarkedToggleGroupItem>
+        <MarkedToggleGroupItem value="right" disabled>right</MarkedToggleGroupItem>
+      </MarkedToggleGroup>,
+    )
+
+    expect(markup).toContain('role="group"')
+    expect(markup).toContain('aria-label="alignment"')
+    expect(markup).toContain('aria-pressed="true"')
+    expect(markup).toContain('data-pressed=""')
+    expect(markup).toContain("disabled")
   })
 
   it("separates active, inactive, and disabled tab states", () => {
