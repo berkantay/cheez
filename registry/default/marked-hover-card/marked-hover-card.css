@@ -1,0 +1,58 @@
+.cheez-hover-card__trigger {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+.cheez-hover-card__trigger:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+.cheez-hover-card__positioner { z-index: 135; outline: 0; }
+
+.cheez-hover-card__popup {
+  position: relative;
+  display: grid;
+  width: 280px;
+  gap: 14px;
+  padding: 18px;
+  color: #f4f0e6;
+  background: #050505;
+  outline: 0;
+  transform-origin: var(--transform-origin);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.cheez-hover-card__popup[data-size="small"] { width: 220px; padding: 14px; }
+.cheez-hover-card__popup[data-size="large"] { width: min(360px, var(--available-width)); padding: 22px; }
+.cheez-hover-card__popup[data-starting-style],
+.cheez-hover-card__popup[data-ending-style] { opacity: 0; transform: translateY(3px) scale(0.98); }
+
+.cheez-hover-card__frame { position: absolute !important; inset: -4px; z-index: -1; }
+.cheez-hover-card__frame > svg { overflow: visible; }
+
+.cheez-hover-card__arrow {
+  display: grid;
+  width: 18px;
+  height: 10px;
+  place-items: center;
+}
+
+.cheez-hover-card__arrow span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  background: #050505;
+  transform: rotate(45deg);
+}
+
+.cheez-hover-card__arrow[data-side="top"] span { transform: rotate(225deg); }
+.cheez-hover-card__arrow[data-side="left"] span { transform: rotate(135deg); }
+.cheez-hover-card__arrow[data-side="right"] span { transform: rotate(-45deg); }
+
+.cheez-hover-card__header { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 11px; }
+.cheez-hover-card__body { display: grid; gap: 8px; }
+.cheez-hover-card__title { width: max-content; max-width: 100%; border-bottom: 2px solid; color: #f4f0e6; font-size: 0.75rem; font-weight: 620; letter-spacing: -0.025em; }
+.cheez-hover-card__description { color: rgba(244, 240, 230, 0.5); font-size: 0.58rem; line-height: 1.55; }
+.cheez-hover-card__meta { display: flex; flex-wrap: wrap; gap: 6px 12px; color: rgba(244, 240, 230, 0.34); font: 0.49rem ui-monospace, monospace; }
+
+@media (prefers-reduced-motion: reduce) { .cheez-hover-card__popup { transition: none; } }

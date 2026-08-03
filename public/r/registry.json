@@ -694,10 +694,30 @@
       ]
     },
     {
+      "name": "marked-hover-card",
+      "type": "registry:ui",
+      "title": "Marked Hover Card",
+      "description": "An accessible Base UI preview card with deliberate hover and focus timing, Cheez-drawn framing, collision-aware placement, and composable identity content.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": ["berkantay/cheez/cheez-ui-core"],
+      "files": [
+        {
+          "path": "registry/default/marked-hover-card/marked-hover-card.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-hover-card/marked-hover-card.tsx"
+        },
+        {
+          "path": "registry/default/marked-hover-card/marked-hover-card.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-hover-card/marked-hover-card.css"
+        }
+      ]
+    },
+    {
       "name": "cheez-ui",
       "type": "registry:base",
       "title": "Cheez UI",
-      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, and context menu components.",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, and hover card components.",
       "registryDependencies": [
         "berkantay/cheez/marked-button",
         "berkantay/cheez/marked-tabs",
@@ -728,7 +748,8 @@
         "berkantay/cheez/marked-menubar",
         "berkantay/cheez/marked-combobox",
         "berkantay/cheez/marked-command",
-        "berkantay/cheez/marked-context-menu"
+        "berkantay/cheez/marked-context-menu",
+        "berkantay/cheez/marked-hover-card"
       ],
       "files": []
     }

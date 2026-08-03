@@ -132,6 +132,10 @@ import {
   MarkedContextMenuTrigger,
 } from "@/registry/default/marked-context-menu/marked-context-menu"
 import {
+  MarkedHoverCard,
+  MarkedHoverCardTrigger,
+} from "@/registry/default/marked-hover-card/marked-hover-card"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -272,6 +276,18 @@ describe("Cheez rendering", () => {
     expect(markup).toContain("cheez-context-menu__group")
     expect(markup).toContain("cheez-context-menu__label")
     expect(markup).toContain("cheez-context-menu__separator")
+  })
+
+  it("keeps hover-card previews attached to native links", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedHoverCard>
+        <MarkedHoverCardTrigger href="/people/ada">ada</MarkedHoverCardTrigger>
+      </MarkedHoverCard>,
+    )
+
+    expect(markup).toContain('href="/people/ada"')
+    expect(markup).toContain("cheez-hover-card__trigger")
+    expect(markup).toContain("ada")
   })
 
   it("separates active, inactive, and disabled tab states", () => {
