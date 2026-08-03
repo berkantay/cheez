@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cheez-ui",
   "title": "Cheez UI",
-  "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, toolbar, toggle group, and number field components.",
+  "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, toolbar, toggle group, number field, and field components.",
   "registryDependencies": [
     "berkantay/cheez/marked-button",
     "berkantay/cheez/marked-tabs",
@@ -37,7 +37,8 @@
     "berkantay/cheez/marked-hover-card",
     "berkantay/cheez/marked-toolbar",
     "berkantay/cheez/marked-toggle-group",
-    "berkantay/cheez/marked-number-field"
+    "berkantay/cheez/marked-number-field",
+    "berkantay/cheez/marked-field"
   ],
   "files": [],
   "type": "registry:base"

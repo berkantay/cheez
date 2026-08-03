@@ -156,6 +156,13 @@ import {
   MarkedNumberFieldLabel,
 } from "@/registry/default/marked-number-field/marked-number-field"
 import {
+  MarkedField,
+  MarkedFieldControl,
+  MarkedFieldDescription,
+  MarkedFieldError,
+  MarkedFieldLabel,
+} from "@/registry/default/marked-field/marked-field"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -363,6 +370,24 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('type="number" min="0" max="10"')
     expect(markup).toContain('id="quantity-description"')
     expect(markup).toContain("cheez-number-field__step")
+  })
+
+  it("wires field labels, descriptions, errors, and native constraints", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedField name="email" invalid>
+        <MarkedFieldLabel required>email</MarkedFieldLabel>
+        <MarkedFieldControl type="email" required placeholder="you@example.com" />
+        <MarkedFieldDescription>used for receipts</MarkedFieldDescription>
+        <MarkedFieldError match>enter a valid email</MarkedFieldError>
+      </MarkedField>,
+    )
+
+    expect(markup).toContain("cheez-field__label")
+    expect(markup).toContain('type="email"')
+    expect(markup).toContain("required")
+    expect(markup).toContain('aria-invalid="true"')
+    expect(markup).toContain("used for receipts")
+    expect(markup).toContain("enter a valid email")
   })
 
   it("separates active, inactive, and disabled tab states", () => {
