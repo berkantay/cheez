@@ -794,10 +794,33 @@
       ]
     },
     {
+      "name": "marked-form",
+      "type": "registry:ui",
+      "title": "Marked Form",
+      "description": "An accessible Base UI form composition with native and custom validation, external server errors, submit and reset actions, status feedback, error summaries, and Cheez-drawn section rhythm.",
+      "dependencies": ["@base-ui/react@^1.6.0"],
+      "registryDependencies": [
+        "berkantay/cheez/marked-field",
+        "berkantay/cheez/marked-button"
+      ],
+      "files": [
+        {
+          "path": "registry/default/marked-form/marked-form.tsx",
+          "type": "registry:component",
+          "target": "components/cheez/marked-form/marked-form.tsx"
+        },
+        {
+          "path": "registry/default/marked-form/marked-form.css",
+          "type": "registry:file",
+          "target": "components/cheez/marked-form/marked-form.css"
+        }
+      ]
+    },
+    {
       "name": "cheez-ui",
       "type": "registry:base",
       "title": "Cheez UI",
-      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, toolbar, toggle group, number field, and field components.",
+      "description": "The Cheez interaction system with marked button, tabs, dropdown, input, textarea, checkbox, radio, switch, select, slider, dialog, tooltip, popover, accordion, toast, alert, progress, badge, avatar, skeleton, separator, card, table, pagination, breadcrumb, navigation menu, menubar, combobox, command, context menu, hover card, toolbar, toggle group, number field, field, and form components.",
       "registryDependencies": [
         "berkantay/cheez/marked-button",
         "berkantay/cheez/marked-tabs",
@@ -833,7 +856,8 @@
         "berkantay/cheez/marked-toolbar",
         "berkantay/cheez/marked-toggle-group",
         "berkantay/cheez/marked-number-field",
-        "berkantay/cheez/marked-field"
+        "berkantay/cheez/marked-field",
+        "berkantay/cheez/marked-form"
       ],
       "files": []
     }

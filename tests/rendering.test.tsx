@@ -163,6 +163,16 @@ import {
   MarkedFieldLabel,
 } from "@/registry/default/marked-field/marked-field"
 import {
+  MarkedForm,
+  MarkedFormActions,
+  MarkedFormErrorSummary,
+  MarkedFormLegend,
+  MarkedFormReset,
+  MarkedFormSection,
+  MarkedFormStatus,
+  MarkedFormSubmit,
+} from "@/registry/default/marked-form/marked-form"
+import {
   MarkedCombobox,
   MarkedComboboxInput,
   MarkedComboboxInputGroup,
@@ -1512,5 +1522,30 @@ describe("Cheez rendering", () => {
     expect(markup).toContain('aria-label="clear command search"')
     expect(markup).toContain('role="separator"')
     expect(markup).toContain("--cheez-command-separator:#b7ff3c")
+  })
+
+  it("composes a marked form from native form semantics", () => {
+    const markup = renderToStaticMarkup(
+      <MarkedForm aria-label="account form" errors={{ email: "already used" }}>
+        <MarkedFormSection>
+          <MarkedFormLegend eyebrow="01">account</MarkedFormLegend>
+        </MarkedFormSection>
+        <MarkedFormStatus state="error">not saved</MarkedFormStatus>
+        <MarkedFormErrorSummary errors={{ email: "already used" }} />
+        <MarkedFormActions>
+          <MarkedFormReset />
+          <MarkedFormSubmit />
+        </MarkedFormActions>
+      </MarkedForm>,
+    )
+
+    expect(markup).toContain("<form")
+    expect(markup).toContain('aria-label="account form"')
+    expect(markup).toContain("<fieldset")
+    expect(markup).toContain("<legend")
+    expect(markup).toContain('type="reset"')
+    expect(markup).toContain('type="submit"')
+    expect(markup).toContain('role="alert"')
+    expect(markup).toContain('href="#email"')
   })
 })

@@ -33,5 +33,6 @@
   { "id": "toolbar", "number": 32, "title": "marked toolbar", "tagline": "tools remember what the hand chose", "accent": "#b7ff3c", "kind": "action" },
   { "id": "toggle-group", "number": 33, "title": "marked toggle group", "tagline": "choices stay visibly chosen", "accent": "#8f74ff", "kind": "selection" },
   { "id": "number-field", "number": 34, "title": "marked number field", "tagline": "numbers respond to pressure", "accent": "#ff4f2e", "kind": "field" },
-  { "id": "field", "number": 35, "title": "marked field", "tagline": "validation should explain itself", "accent": "#ff5fa2", "kind": "field" }
+  { "id": "field", "number": 35, "title": "marked field", "tagline": "validation should explain itself", "accent": "#ff5fa2", "kind": "field" },
+  { "id": "form", "number": 36, "title": "marked form", "tagline": "submission should leave a clear trace", "accent": "#35d9ff", "kind": "field" }
 ]
